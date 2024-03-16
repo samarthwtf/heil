@@ -1,0 +1,272 @@
+[
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "config",
+        "description": "config",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "AutoPost",
+        "kind": 6,
+        "importPath": "cogs.autopost",
+        "description": "cogs.autopost",
+        "peekOfCode": "class AutoPost(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n    @commands.command(name='fem')\n    @commands.is_owner()\n    async def fem(self, ctx):\n        f = open('./data/female.txt', 'r')\n        for lines in f:\n            e = discord.Embed(\n                color=config.Colors.default",
+        "detail": "cogs.autopost",
+        "documentation": {}
+    },
+    {
+        "label": "Events",
+        "kind": 6,
+        "importPath": "cogs.events",
+        "description": "cogs.events",
+        "peekOfCode": "class Events(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n    @commands.Cog.listener()\n    async def on_ready(self):\n        print(f\"{self.bot.user.name} ({self.bot.user.id})\")\n        await self.bot.change_presence(status= discord.Status.idle, activity = discord.Streaming(name = \"rep /slacks\", url = \"https://www.twitch.tv/Discord\"))\n    @commands.Cog.listener()\n    async def on_presence_update(self, before : discord.Member, after: discord.Member):\n        if before.activities == after.activities:",
+        "detail": "cogs.events",
+        "documentation": {}
+    },
+    {
+        "label": "Moderation",
+        "kind": 6,
+        "importPath": "cogs.mod",
+        "description": "cogs.mod",
+        "peekOfCode": "class Moderation(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n    @commands.command(\n        name='purge',\n        aliases=['clear']\n    )\n    async def purge(self, ctx: commands.Context, len: int = 1):\n        amount = len + 1\n        await ctx.channel.purge(limit=amount)",
+        "detail": "cogs.mod",
+        "documentation": {}
+    },
+    {
+        "label": "OwnerCmds",
+        "kind": 6,
+        "importPath": "cogs.owner",
+        "description": "cogs.owner",
+        "peekOfCode": "class OwnerCmds(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n    @commands.command(name='restart')\n    @commands.is_owner()\n    async def restart(self, ctx: commands.Context):\n        embed = discord.Embed(color=config.Colors.default, description=\"restarting .\")\n        ambed = discord.Embed(color=config.Colors.default, description=\"restarting ..\")\n        bmbed = discord.Embed(color=config.Colors.default, description=\"restarting ...\")\n        message = await ctx.send(embed=embed)",
+        "detail": "cogs.owner",
+        "documentation": {}
+    },
+    {
+        "label": "UtilCmds",
+        "kind": 6,
+        "importPath": "cogs.utils",
+        "description": "cogs.utils",
+        "peekOfCode": "class UtilCmds(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot \n    @commands.command(\n        name='ping'\n    )\n    async def ping(self, ctx: commands.Context):\n        e = discord.Embed(\n            color=config.Colors.default,\n            description=f'it took `{round(self.bot.latency * 1000)}` ms to ping the me.',",
+        "detail": "cogs.utils",
+        "documentation": {}
+    },
+    {
+        "label": "restart",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def restart():\n    os.execvp(sys.executable, ['python'] + sys.argv)",
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "bot = commands.Bot(\n    command_prefix=get_prefix,\n    intents=discord.Intents.all(),\n    allowed_mentions = discord.AllowedMentions(\n        everyone=False,\n        roles=False\n    )\n)\nbot.owner_ids = config.owner_ids\n@bot.event",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "bot.owner_ids",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "bot.owner_ids = config.owner_ids\n@bot.event\nasync def on_connect():\n    extentions = ['jishaku']\n    for files in os.listdir('./cogs'):\n        if files.endswith('.py'):\n            extentions.append(\"cogs.\" + files[:-3])\n    for extention in extentions:\n        await bot.load_extension(extention)\nbot.run(token=config.token, reconnect=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Colors:\n    default = 0x2b2d31\nclass VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798\nclass Welcome:\n    mainCh = 1217436555480924202\n    chatCh = 1217436561574985769",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "VanityRoles",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798\nclass Welcome:\n    mainCh = 1217436555480924202\n    chatCh = 1217436561574985769",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Welcome",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Welcome:\n    mainCh = 1217436555480924202\n    chatCh = 1217436561574985769",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "token",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "token = \"MTA4NjUyMTE5MDI5MTYwNzYxMg.GzsxLO.phyWGefIswjqTgBfdQvPmvWxVrmQdW-mKFIc7A\"\nguild = 1077555829697413212\nrole = 1086537030143574078\nowner_ids = [1151502339476312086, 1102065062845354015, 976322620754632724, 975356607816958012]\nclass Colors:\n    default = 0x2b2d31\nclass VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "guild",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "guild = 1077555829697413212\nrole = 1086537030143574078\nowner_ids = [1151502339476312086, 1102065062845354015, 976322620754632724, 975356607816958012]\nclass Colors:\n    default = 0x2b2d31\nclass VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798\nclass Welcome:",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "role",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "role = 1086537030143574078\nowner_ids = [1151502339476312086, 1102065062845354015, 976322620754632724, 975356607816958012]\nclass Colors:\n    default = 0x2b2d31\nclass VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798\nclass Welcome:\n    mainCh = 1217436555480924202",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "owner_ids",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "owner_ids = [1151502339476312086, 1102065062845354015, 976322620754632724, 975356607816958012]\nclass Colors:\n    default = 0x2b2d31\nclass VanityRoles:\n    haunt = 1077555829697413212\n    logchan = 1217436573872685070\n    hauntrole = 1086523939632713798\nclass Welcome:\n    mainCh = 1217436555480924202\n    chatCh = 1217436561574985769",
+        "detail": "config",
+        "documentation": {}
+    }
+]
